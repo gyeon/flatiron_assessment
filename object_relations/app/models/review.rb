@@ -1,21 +1,20 @@
 class Review
-  @@all = {}
-  attr_accessor :post, :restaurant, :customer
+  ## belongs to restaurant
+  ## belongs to customer
+  @@all = []
+  attr_accessor :post, :customer, :restaurant
 
-  def initialize(post, restaurant, customer)
+  def initialize(post, customer, restaurant)
     @post = post
-    @restaurant = restaurant
     @customer = customer
+    @restaurant = restaurant
     @@all << self
   end
 
-  def customer
-    customer.add_review(self)
+  def self.all
+    @@all
   end
 
-  def restaurant
-
-  end
 
 end
 
