@@ -24,11 +24,13 @@ reviews belong to a restaurant
 many to many:
 restaurants - customers
 
-has one:
+belongs to:
 reviews -> restaurant
 reviews -> customer
 
 has many:
-
 customer -> reviews
-restaurant -> reviews
+
+
+has many through:
+restaurant has many reviews THROUGH customers
