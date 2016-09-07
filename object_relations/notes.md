@@ -8,9 +8,9 @@ Yelp
 
 3 models:
 
-customers
-restaurants
-reviews
+- customers
+- restaurants
+- reviews
 
 customers have many reviews
 customers have many restaurants
@@ -32,9 +32,3 @@ has many:
 
 customer -> reviews
 restaurant -> reviews
-
-
-
-
-
- 
