@@ -2,7 +2,7 @@ class Customer
   #has many reviews
   #has many restaurants
 
-  attr_accessor :name, :reviews, :restaurants
+  attr_accessor :name, :reviews, :restaurant
 
   @@all = []
 
@@ -21,11 +21,10 @@ class Customer
     self.all.find {|person| person.name == name}
   end
 
-  def find_and_add_review(name)
-    customer_review = Review.all.find {|review| review.customer.name == name}
-    @reviews << customer_review
+  def add_review(review)
+    @reviews << review
+    review.customer = self
   end
-
 
   def restaurants
     self.reviews.collect do |review|

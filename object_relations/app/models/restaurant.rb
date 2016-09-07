@@ -18,13 +18,9 @@ class Restaurant
     self.all.find {|restaurant| restaurant.name == name}
   end
 
-  # def find_review
-  #   review = Review.all.select {|review| review.restaurant == self }
-  # end
-
-  def find_and_add_review(name)
-    restaurant_review = Review.all.find {|review| review.restaurant.name == name}
-    @reviews << restaurant_review
+  def add_review(review)
+    @reviews << review
+    review.restaurant = self
   end
 
   def customers

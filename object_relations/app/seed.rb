@@ -9,10 +9,10 @@ viet = Restaurant.new("Siagon Bowl")
 japanese = Restaurant.new("Yasuda")
 chinese = Restaurant.new("Hoongs Palace")
 
-Review.new("good", gina, thai)
-Review.new("soso", sharon, korean)
-Review.new("awesome", sean, viet)
-Review.new("ok", jenny, japanese)
+# Review.new("good", gina, thai)
+# Review.new("soso", sharon, korean)
+# Review.new("awesome", sean, viet)
+# Review.new("ok", jenny, japanese)
 ##how would i add a review?
 ## first find whoever is making the review, and call
 ## the add_review method on them.

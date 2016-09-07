@@ -7,7 +7,9 @@ class Review
   def initialize(post, customer, restaurant)
     @post = post
     @customer = customer
+    customer.add_review(self)
     @restaurant = restaurant
+    restaurant.add_review(self)
     @@all << self
   end
 
@@ -15,7 +17,9 @@ class Review
     @@all
   end
 
-
+### now instead of finding and adding in the separate classes,
+### automatically call the add_review method on the class and add
+### to the reviews when a new Review is created.
 end
 
 
