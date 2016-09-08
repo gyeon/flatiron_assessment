@@ -1,6 +1,5 @@
-require_relative '../config/environment.rb'
+require 'bundler/setup'
+Bundler.require
+DB = {conn: SQLite3::Database.new("yelper.db")}
 
-def reload
-  load 'config/environment.rb'
-end
-Pry.start
+require_all 'app'

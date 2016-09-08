@@ -6,7 +6,7 @@ class Owner
     name: "TEXT",
   }
 
-  attr_accessor(*self.public_attributes)
+  attr_accessor(*self.public_attributes)  
   attr_reader :id
 
   def restaurants
