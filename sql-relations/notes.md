@@ -24,7 +24,7 @@ id | name |
 customers, restaurants, owners, reviews
 
 customers has many reviews
-customers has many restaurants
+
 
 restaurants has many reviews THROUGH customers
 restaurants has many customers
@@ -37,17 +37,22 @@ owner has many restaurants
 owner has many customers THROUGH restaurants
 owner has many reviews THROUGH customers?
 
-
-many to many:
-restaurants - customers
-
 belongs to:
 reviews -> restaurant
 reviews -> customer
+  id  |  content |  restaurant_id | customer_id
+
+
 restaurant -> owner
+  id | name | owner_id
+
 
 has many:
 customer -> reviews
+  id | customer_name |
+
+restaurants -> customers
+  id | restaurant_name |
 
 has many through:
 restaurant has many reviews THROUGH customers
